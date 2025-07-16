@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: web
-        image: fabricioveronez/web-color:blue
+        image: janerson1981/maratona-devops-ia:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -27,6 +27,6 @@ spec:
     app: web
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8080
+      targetPort: 8080
   type: LoadBalancer
